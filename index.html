@@ -14,13 +14,15 @@
             var my_li = this;
             $(this).click(function()
             {
-                console.log($(this).attr('data-url'));
-                var get_url = 'your url';
+               var get_url = $(this).attr('data-url');
+                console.log(get_url);
                 
                 /*put your ajax code here*/
                 $.get(get_url,function(data)
                     {
                         //fill the contents of #main_content with the data of the retrieved file
+                    $('#main_content').html(data);
+                    
                     });
                     
                     
